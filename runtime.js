@@ -178,7 +178,7 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
     throw err;
   }
   try {
-    str = str || require('fs').readFileSync(filename, 'utf8')
+    str = str || fs.readFileSync(filename, 'utf8')
   } catch (ex) {
     rethrow(err, null, lineno)
   }
@@ -202,8 +202,6 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
     + '\n' + context + '\n\n' + err.message;
   throw err;
 };
-
-},{"fs":2}],2:[function(require,module,exports){
 
 },{}]},{},[1])(1)
 });
