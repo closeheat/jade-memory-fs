@@ -12,7 +12,8 @@ html
       #content
         .logo-container
           a(href=path('/'))
-            img(src="/style/logo.png",alt="Jade - Node Template Engine")
+            img(src="/style/logo.png")
+            .sr-only Jade - Node Template Engine
         .navbar.navbar-default.navbar-static-top
           .container
             .navbar-header.visible-sm.visible-xs
@@ -34,9 +35,9 @@ html
               ul.nav.navbar-nav.navbar-right
                 li(class=section === 'history' ? 'active' : false)
                   a(href='/history') Change Log
-                li: a(href='https://coveralls.io/r/jadejs/jade?branch=master') Code Coverage
-                li: a(href='https://travis-ci.org/jadejs/jade') Test Results
-                li: a(href='https://github.com/jadejs/jade') GitHub Repository
+                li: a(href=path('/coverage/')) Code Coverage
+                li: a(href='https://travis-ci.org/visionmedia/jade') Test Results
+                li: a(href='https://github.com/visionmedia/jade') GitHub Repository
               block navigation
         .container
           block content
@@ -47,10 +48,8 @@ html
           p
             | Jade is a template language maintained by&nbsp;
             a(href='http://www.forbeslindesay.co.uk') @ForbesLindesay
-            | &nbsp;and contributed by&nbsp;
-            a(href='https://github.com/jadejs/jade/graphs/contributors') many others
             |.
     include ./includes/ga.jade
     script(src=path("/client.js"))
-    script(src="http://code.jquery.com/jquery-2.1.3.min.js")
-    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+    script(src="http://code.jquery.com/jquery-2.1.1.min.js")
+    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
